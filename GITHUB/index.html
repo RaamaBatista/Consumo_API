@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nome">
+    <button onclick="github()">BUSCAR</button>
+<div>
+    <img src="" alt="" srcset="" id="img">
+    <input type="text" name="" id="bio">
+    <input type="text" name="" id="loc">
+    <input type="text" name="" id="name">
+</div>
+
+    <script>
+        function github(){
+            let nome = document.getElementById('nome').value
+            let bio = document.getElementById('bio')
+            let name = document.getElementById('name')
+            let loc = document.getElementById('loc')
+            let img = document.getElementById('img')
+
+
+            
+            fetch(`https://api.github.com/users/${nome}`, {
+                method: 'GET'
+            })
+            .then(response => {
+                return response.json()
+            })
+            .then(data=> {
+                bio.value = data.bio
+                name.value = data.name
+                loc.value = data.location 
+                img.src = data.avatar_url
+
+            })
+        }
+    </script>
+    
+
+</body>
+</html>

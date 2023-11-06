@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../cadastrar/telas.css">
+</head>
+
+<body>
+    <a href="../página principal/principal.html"><button>Menu</button></a>
+    <div id="items">
+
+        <label for="id: ">ID:</label>
+        <input type="number" id="item" placeholder="Digite o ID que você deseja atualizar">
+        <label for="Data: ">Data:</label>
+        <input type="date" id="data">
+        <label for="Quantidade: ">Quantidade do item:</label>
+        <input type="number" id="qtd" placeholder="Ex: 2">
+        <label for="Nome: ">Nome do item:</label>
+        <input type="text" id="name" placeholder="Ex: Feijão">
+        <label for="Tipo: ">Tipo:</label>
+        <input type="text" id="tipo" placeholder="Ex: alimento, bebida...">
+        <label for="Preço: ">Preço:</label>
+        <input type="number" id="preco" placeholder="R$:">
+        <button onclick="atualizar()">Atualizar</button>
+    </div>
+</body>
+<script src="atualizar.js"></script>
+
+</html>
